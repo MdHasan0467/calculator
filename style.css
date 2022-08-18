@@ -1,0 +1,159 @@
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header h1{
+  color: blue;
+  font-size: 40px;
+  font-family:'poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.calculator-container{
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table{
+  border-collapse: collapse;
+  border: 2px solid #000;
+  background: gray;
+}
+
+td{
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  
+}
+#myResult{
+  background-color: lightblue;
+  width: 500px;
+  border: 1px solid ;
+  border-radius:10px;
+}
+/* tr{
+  background-color: #000;
+} */
+input[type="button"]{
+  width: 120px;
+  height: 80px;
+  color: #000;
+  font-size: 2rem;
+  background: #f1f1f1;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="text"]{
+  width: 420px;
+  height: 80px;
+  margin: 10px;
+  padding: 2px;
+  border: none;
+  outline: none;
+}
+input[type="button"].right-btn{
+  color: #fff;
+  background: #000;
+}
+input[type="button"].Clear{
+  color: #fff;
+  background: red;
+}
+input[type="button"].equal{
+  color: #fff;
+  background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  margin-top: 20px;
+  text-shadow: 2px 2px red;
+
+  text-align: center;
+}
+
+header h1 span {
+  text-shadow: 2px 2px 5px green;
+
+}
+
+.container {
+  box-shadow: 20px 20px 50px grey;
+  margin-top: 50px;
+  border-radius: 10px;
+  height: 360px;
+  width: 220px;
+  padding: 10px;
+  border: 3px solid rgb(187, 187, 85);
+  background-color: gray;
+}
+
+.main-bar {
+  text-align: right;
+  margin-bottom: 5px;
+  height: 60px;
+}
+
+.line {
+  display: flex;
+}
+
+.btn {
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+}
+
+.blackcolor {
+  color: black;
+  background-color: yellowgreen;
+}
+
+.last {
+  display: flex;
+}
+
+.last input {
+  text-align: center;
+  width: 100px;
+  display: flex;
+}  */

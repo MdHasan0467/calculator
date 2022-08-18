@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Calculator</h1>
+    </header>
+
+    <main>
+      <section class="calculator-container">
+        <table>
+          <tr class="input-field">
+            <td colspan="4"><input id="myResult" type="text" ></td>
+          </tr>
+
+          <tr>
+            <td><input class="Clear" type="button" value="AC"onclick="DeleteMe()" ></td>
+            <td><input class="right-btn" type="button" value="(" onclick="calculator('(')"></td>
+            <td><input class="right-btn" type="button" value=")" onclick="calculator(')')"></td>
+            <td><input class="right-btn" type="button" value="/" onclick="calculator('/')"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" value="7" onclick="calculator('7')"></td>
+            <td><input type="button" value="8" onclick="calculator('8')"></td>
+            <td><input type="button" value="9" onclick="calculator('9')"></td>
+            <td><input class="right-btn" type="button" value="*" onclick="calculator('*')"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" value="4" onclick="calculator('4')"></td>
+            <td><input type="button" value="5" onclick="calculator('5')"></td>
+            <td><input type="button" value="6" onclick="calculator('6')"></td>
+            <td><input class="right-btn" type="button" value="-" onclick="calculator('-')"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" value="1" onclick="calculator('1')"></td>
+            <td><input type="button" value="2" onclick="calculator('2')"></td>
+            <td><input type="button" value="3" onclick="calculator('3')"></td>
+            <td><input class="right-btn" type="button" value="+" onclick="calculator('+')"></td>
+          </tr>
+
+          <tr>
+            <td><input type="button" value="%" onclick="calculator('%')" ></td>
+            <td><input type="button" value="0" onclick="calculator('0')"></td>
+            <td><input type="button" value="." onclick="calculator('.')"></td>
+            <td><input class="equal" type="button" value="=" onclick="Answer()"></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+
+    <script>
+      function DeleteMe(){
+        document.getElementById('myResult').value = '';
+        
+      }
+      function calculator(NewValue){
+        document.getElementById('myResult').value +=NewValue;
+      }
+      function Answer(){
+        let a = document.getElementById('myResult').value;
+        let b = eval(a);
+        document.getElementById('myResult').value = b;
+      }
+     
+    </script>
+
+
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>THIS IS YOUR CALCULATOR <br>
+        <span>Calculate Your Account</span></h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <form action="" name="form">
+                    <input class="form-control main-bar" type="text" name="display"  placeholder="0" id="inp">
+                    <div class="button-area">
+                        <div class="line">
+                            <input type="button" name="btn" value="7" class="btn btn-info" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="8" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="9" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="+" class="btn blackcolor" id="" onclick="Calculate(this.value)" id="">
+                        </div>
+                        <div class="line">
+                            <input type="button" name="btn" value="4" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="5" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="6" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="*" class="btn blackcolor" id="" onclick="Calculate(this.value)" id="">
+                        </div>
+                        <div class="line">
+                            <input type="button" name="btn" value="1" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="2" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="3" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="-" class="btn blackcolor" id="" onclick="Calculate(this.value)" id="">
+                        </div>
+                        <div class="line">
+                            <input type="button" name="btn" value="0" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="00" class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="." class="btn btn-info" id="" onclick="Calculate(this.value)" id="">
+                            <input type="button" name="btn" value="/" class="btn blackcolor" id="" onclick="Calculate(this.value)" id="">
+                        </div>
+                        <div class="last">
+                            <input type="button" name="btn" value="     C" class="btn btn-warning" id=""  id=""  onclick="display.value= null">
+                            <input type="button" name="btn" value="     =" class="btn btn-success" id=""  id="" onclick="display.value = eval(display.value)">
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function Calculate(x){
+
+            form.display.value = form.display.value + x;
+        }
+    </script>
+</body>
+
+</html> -->
